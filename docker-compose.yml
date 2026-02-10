@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  alex:
+    image: alex-chatbot:latest  # Change this to the correct image name
+    container_name: alex_chatbot
+    environment:
+      - ENV_VAR=value  # Change these to your actual environment variables
+    ports:
+      - '5000:5000'  # Change the port mapping as needed
+    volumes:
+      - ./data:/data  # Change the volume mapping as needed
+    restart: unless-stopped
